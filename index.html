@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flores Amarillas y Más</title>
+</head>
+<body>
+
+    <div id="content">
+        <!-- Página 1: 21 de Septiembre -->
+        <div class="page" id="page1">
+            <h1>21 de Septiembre del 2024<br>Flores Amarillas para una boludita</h1>
+            <p>"Un pequeño gesto para la flor más hermosa y fea a la vez"</p>
+            <img src="spritelionflower.jpeg" alt="Flores Amarillas">
+            <button onclick="changePage('page2')">Siguiente</button>
+        </div>
+
+        <!-- Página 2: Sprite de Masad -->
+        <div class="page" id="page2" style="display:none;">
+            <h1>De: Sprite de Masad</h1>
+            <img src="spritedemasad.jpeg" alt="Sprite de Masad">
+            <button onclick="changePage('page3')">Siguiente</button>
+        </div>
+
+        <!-- Página 3: Para Annita -->
+        <div class="page" id="page3" style="display:none;">
+            <h1>Para: Annita Chismecito</h1>
+            <img src="annita.jpeg" alt="Annita Chismecito">
+            <button onclick="changePage('page4')">Siguiente</button>
+        </div>
+
+        <!-- Página 4: Enviando -->
+        <div class="page" id="page4" style="display:none;">
+            <h1>Enviando...</h1>
+            <img src="avion.jpeg" alt="Avión">
+            <button onclick="changePage('page5')">Siguiente</button>
+        </div>
+
+        <!-- Página 5: Nueva Página Final -->
+        <div class="page" id="page5" style="display:none;">
+            <h1>Para vos Anita, con mucho cariño<br>Te quiero, gracias por tu amistad</h1>
+            <iframe src="paginaFinal.html" width="100%" height="600px" style="border:none;"></iframe>
+            <button onclick="changePage('page1')">Volver al Inicio</button>
+        </div>
+    </div>
+
+    <script>
+        function changePage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none'; // Oculta todas las páginas
+            });
+            document.getElementById(pageId).style.display = 'block'; // Muestra la página seleccionada
+        }
+    </script>
+    
+</body>
+</html>
